@@ -21,7 +21,7 @@ def load_data(data_path):
 def train(data_path, model_path):
     X, y = load_data(data_path)
 
-    pipeline = Pipeline([("tfidf", TfidfVectorizer()), ("svm", SGDClassifier())])
+    pipeline = Pipeline([("tfidf", TfidfVectorizer(min_df=5)), ("svm", SGDClassifier())])
     pipeline.fit(X, y)
 
     with open(model_path, "wb") as f:
