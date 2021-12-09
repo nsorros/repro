@@ -25,7 +25,7 @@ def train(data_path, model_path):
     pipeline.fit(X, y)
 
     with open(model_path, "wb") as f:
-        f.write(pickle.dumps(model_path))
+        f.write(pickle.dumps(pipeline))
 
 
 if __name__ == "__main__":
