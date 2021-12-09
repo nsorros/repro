@@ -1,3 +1,5 @@
+.DEFAULT_GOAL := train
+
 VIRTUALENV := venv
 
 virtualenv:
